@@ -537,6 +537,13 @@ em { font-style: italic; color: var(--nude); }
   overflow: hidden;
 }
 
+.about-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 10%;
+}
+
 .about-placeholder { display: none; }
 
 .about-badge {
@@ -1181,7 +1188,7 @@ footer {
   .collection-card.large .card-img-wrap { min-height: 280px; }
 
   .about-inner { grid-template-columns: 1fr; gap: 3rem; }
-  .about-img-wrap { aspect-ratio: 4/3; }
+  .about-img-wrap { aspect-ratio: 3/4; }
   .about-badge { bottom: -0.5rem; right: -0.5rem; }
 
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
