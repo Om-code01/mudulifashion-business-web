@@ -441,9 +441,8 @@ em { font-style: italic; color: var(--nude); }
 
 .collections-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  align-items: start;
 }
 
 .collection-card.large { grid-column: span 2; }
@@ -1140,8 +1139,7 @@ footer {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .collections-grid { grid-template-columns: repeat(2, 1fr); }
-  .collection-card.large { grid-column: span 2; grid-row: span 1; }
-  .collection-card.large .card-img-wrap { min-height: 350px; }
+  .collection-card.large { grid-column: unset; }
   .insta-grid { grid-template-columns: repeat(3, 1fr); }
   .cat-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-inner-grid { grid-template-columns: 1fr 1fr; }
