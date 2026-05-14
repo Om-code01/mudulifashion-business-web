@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muduli Fashion — Premium Women's Clothing</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="logo">
+        <img src="images/ChatGPT Image May 13, 2026, 11_06_44 PM.png" alt="Muduli Fashion" class="logo-img" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="search-wrap" id="searchWrap">
+          <input type="text" class="search-input" id="searchInput" placeholder="Search products..." />
+        </div>
+        <button class="search-btn" id="searchBtn" aria-label="Search"><i class="fas fa-search"></i></button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fas fa-sun" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#collections">Collections</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-img-wrap">
+      <!-- Replace src with your hero banner photo -->
+      <img src="images/ChatGPT Image May 13, 2026, 11_36_33 PM.png" alt="Muduli Fashion Hero" class="hero-img" />
+      <div class="hero-placeholder" style="display:none">
+        
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-tag">New Collection 2025</p>
+      <h1 class="hero-title">Wear Your<br /><em>Story</em></h1>
+      <p class="hero-sub">Korean • Western • Party Wear 🖤</p>
+      <div class="hero-btns">
+        <a href="#gallery" class="btn-primary">Shop Now</a>
+        <a href="#collections" class="btn-hero-outline">Explore Collections</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Korean Fashion</span><span>✦</span>
+      <span>Western Wear</span><span>✦</span>
+      <span>Oversized Fashion</span><span>✦</span>
+      <span>Party Wear</span><span>✦</span>
+      <span>Korean Fashion</span><span>✦</span>
+      <span>Western Wear</span><span>✦</span>
+      <span>Oversized Fashion</span><span>✦</span>
+      <span>Party Wear</span><span>✦</span>
+    </div>
+  </div>
+
+  <!-- COLLECTIONS -->
+  <section id="collections">
+    <div class="section-header">
+      <p class="section-tag">Curated For You</p>
+      <h2>Featured Collections</h2>
+    </div>
+    <div class="collections-grid">
+
+      <div class="collection-card large">
+        <div class="card-img-wrap">
+          <img src="images/skirt.jpeg" alt="Korean Fashion" onerror="this.style.display='none'" />
+          <div class="card-placeholder">[ Korean Fashion Photo ]</div>
+        </div>
+        <div class="card-info">
+          <h3>Korean Fashion</h3>
+          <p>Minimal. Chic. Effortless.</p>
+          <a href="#gallery" class="card-link">Shop Now →</a>
+        </div>
+      </div>
+
+      <div class="collection-card">
+        <div class="card-img-wrap">
+          <img src="images/file_0000000060087208bff37e43c4b7b9bb.png" alt="Western Wear" onerror="this.style.display='none'" />
+          <div class="card-placeholder">[ Western Wear Photo ]</div>
+        </div>
+        <div class="card-info">
+          <h3>Western Wear</h3>
+          <p>Bold. Modern. You.</p>
+          <a href="#gallery" class="card-link">Shop Now →</a>
+        </div>
+      </div>
+
+      <div class="collection-card">
+        <div class="card-img-wrap">
+          <img src="images/oversized.jpg" alt="Oversized Fashion" onerror="this.style.display='none'" />
+          <div class="card-placeholder">[ Oversized Fashion Photo ]</div>
+        </div>
+        <div class="card-info">
+          <h3>Oversized Fashion</h3>
+          <p>Comfort meets style.</p>
+          <a href="#gallery" class="card-link">Shop Now →</a>
+        </div>
+      </div>
+
+      <div class="collection-card">
+        <div class="card-img-wrap">
+          <img src="images/party-wear.jpg" alt="Party Wear" onerror="this.style.display='none'" />
+          <div class="card-placeholder">[ Party Wear Photo ]</div>
+        </div>
+        <div class="card-info">
+          <h3>Party Wear</h3>
+          <p>Shine every night.</p>
+          <a href="#gallery" class="card-link">Shop Now →</a>
+        </div>
+      </div>
+
+      <div class="collection-card">
+        <div class="card-img-wrap">
+          <img src="images/party skirt.jpeg" alt="Office Wear" />
+          <div class="card-placeholder">[ Office Wear Photo ]</div>
+        </div>
+        <div class="card-info">
+          <h3>Office Wear</h3>
+          <p>Polished. Powerful. You.</p>
+          <a href="#gallery" class="card-link">Shop Now →</a>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-inner">
+      <div class="about-img-wrap">
+        <img src="images/ChatGPT Image May 14, 2026, 12_59_37 AM.png" alt="About Muduli Fashion" onerror="this.style.display='none'" />
+        <div class="about-placeholder">[ Brand / Model Photo ]</div>
+        <div class="about-badge">Est. 2025</div>
+      </div>
+      <div class="about-text">
+        <p class="section-tag">Our Story</p>
+        <h2>Affordable Fashion<br />with Premium Vibes ✨</h2>
+        <p class="about-bio">
+          Muduli Fashion was born from a love of style that doesn't break the bank.
+          We curate the finest Korean, Western, and Party wear — pieces that make you
+          feel expensive without the price tag.
+        </p>
+        <p class="about-bio">
+          Every piece is handpicked with you in mind — the modern woman who lives boldly,
+          dresses intentionally, and never compromises on her aesthetic.
+        </p>
+        <div class="about-stats">
+          <div class="stat"><span>100+</span><small>Happy Customers</small></div>
+          <div class="stat"><span>5+</span><small>Collections</small></div>
+          <div class="stat"><span>100%</span><small>Style Guaranteed</small></div>
+        </div>
+        <a href="#contact" class="btn-primary">DM for Orders 💌</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED CATEGORIES -->
+  <section id="categories">
+    <div class="section-header">
+      <p class="section-tag">Browse By Style</p>
+      <h2>Featured Categories</h2>
+    </div>
+    <div class="cat-grid">
+      <div class="cat-card reveal">
+        <div class="cat-img-wrap">
+          <img src="images/download (2).jpg" alt="Korean Wear" />
+          <div class="cat-overlay">
+            <h3>Korean Wear</h3>
+            <p>Minimal. Chic. Effortless.</p>
+            <a href="#gallery" class="cat-link">Shop Now →</a>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card reveal">
+        <div class="cat-img-wrap">
+          <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&q=80" alt="Oversized Fashion" />
+          <div class="cat-overlay">
+            <h3>Oversized Fashion</h3>
+            <p>Comfort meets style.</p>
+            <a href="#gallery" class="cat-link">Shop Now →</a>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card reveal">
+        <div class="cat-img-wrap">
+          <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&q=80" alt="Party Wear" />
+          <div class="cat-overlay">
+            <h3>Party Wear</h3>
+            <p>Shine every night.</p>
+            <a href="#gallery" class="cat-link">Shop Now →</a>
+          </div>
+        </div>
+      </div>
+      <div class="cat-card reveal">
+        <div class="cat-img-wrap">
+          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80" alt="Office Wear" />
+          <div class="cat-overlay">
+            <h3>Office Wear</h3>
+            <p>Polished. Powerful. You.</p>
+            <a href="#gallery" class="cat-link">Shop Now →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT GALLERY -->
+  <section id="gallery">
+    <div class="section-header">
+      <p class="section-tag">Latest Drops</p>
+      <h2>Product Showcase</h2>
+    </div>
+    <div class="gallery-grid">
+
+      <div class="gallery-item" onclick="openProduct('images/file_0000000060087208bff37e43c4b7b9bb.png','Bell-Bottom Jeggings','Bold western style co-ord set. Perfect for casual outings & college looks.','₹700')">
+        <img src="images/file_0000000060087208bff37e43c4b7b9bb.png" alt="Western Co-ord Set" />
+        <div class="gallery-overlay"><span>View</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openProduct('images/strpted.jpeg','Striped Formal Shirt','Trendy striped top perfect for casual & everyday looks.','₹599')">
+        <img src="images/strpted.jpeg" alt="Striped Top" />
+        <div class="gallery-overlay"><span>View</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openProduct('images/skirt.jpeg','Tennis Skirt','Elegant Korean style skirt. Minimal, chic and effortless.','₹499')">
+        <img src="images/skirt.jpeg" alt="Korean Skirt" />
+        <div class="gallery-overlay"><span>View</span></div>
+      </div>
+
+      <div class="gallery-item" onclick="openProduct('images/party skirt.jpeg','casual Skirt','Stunning Formal skirt perfect for office wear& special occasions.','₹499')">
+        <img src="images/party skirt.jpeg" alt="Party Skirt" />
+        <div class="gallery-overlay"><span>View</span></div>
+      </div>
+
+      <div class="gallery-item coming-soon-card" onclick="openComingSoon()">
+        <div class="coming-soon-content">
+          <p class="section-tag">Next Drop</p>
+          <h3>Coming Soon</h3>
+          <p>Something beautiful is on its way ✨</p>
+          <span class="coming-soon-icon">🖤</span>
+        </div>
+      </div>
+
+      <div class="gallery-item coming-soon-card" onclick="openComingSoon()">
+        <div class="coming-soon-content">
+          <p class="section-tag">Next Drop</p>
+          <h3>Coming Soon</h3>
+          <p>Something beautiful is on its way ✨</p>
+          <span class="coming-soon-icon">🖤</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRODUCT MODAL -->
+  <div id="productModal" class="modal-backdrop" onclick="closeProduct(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+      <div class="modal-img-wrap">
+        <img id="modalImg" src="" alt="Product" />
+      </div>
+      <div class="modal-info">
+        <p class="section-tag">Muduli Fashion</p>
+        <h3 id="modalName"></h3>
+        <p id="modalDesc"></p>
+        <p class="modal-price" id="modalPrice"></p>
+        <div class="modal-actions">
+          <a id="modalDM" href="https://instagram.com/mudulifashion" target="_blank" class="btn-primary">DM to Order 💌</a>
+          <a href="mailto:mudulifashion@gmail.com" class="btn-outline">Email Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMING SOON MODAL -->
+  <div id="comingSoonModal" class="modal-backdrop" onclick="closeComingSoon(event)">
+    <div class="coming-soon-modal">
+      <button class="modal-close" onclick="document.getElementById('comingSoonModal').classList.remove('open');document.body.style.overflow=''">&times;</button>
+      <p class="section-tag">Muduli Fashion</p>
+      <h2>Coming Soon ✨</h2>
+      <p>Our next drop is being curated with love.<br/>Stay tuned for something stunning.</p>
+      <div class="coming-soon-dots"><span></span><span></span><span></span></div>
+      <p class="coming-soon-notify">Be the first to know — follow us on Instagram</p>
+      <a href="https://instagram.com/mudulifashion" target="_blank" class="btn-primary">
+        <i class="fab fa-instagram"></i> &nbsp;@mudulifashion
+      </a>
+    </div>
+  </div>
+
+  <!-- INSTAGRAM GRID -->
+  <section id="instagram">
+    <div class="section-header">
+      <p class="section-tag">Follow Us</p>
+      <h2>@mudulifashion</h2>
+    </div>
+    <div class="insta-grid">
+      <div class="insta-item">
+        <img src="images/strpted.jpeg" alt="Striped" />
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <img src="images/skirt.jpeg" alt="Skirt" />
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <img src="images/party skirt.jpeg" alt="Party Skirt" />
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <img src="images/file_0000000060087208bff37e43c4b7b9bb.png" alt="Western Wear" />
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <img src="images/insta-5.jpg" alt="Instagram 5" onerror="this.parentElement.style.display='none'" />
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+      <div class="insta-item">
+        <img src="images/insta-6.jpg" alt="Instagram 6" onerror="this.parentElement.style.display='none'" />
+        <div class="insta-overlay"><i class="fab fa-instagram"></i></div>
+      </div>
+    </div>
+    <div class="insta-cta">
+      <a href="https://instagram.com/mudulifashion" target="_blank" class="btn-outline">
+        <i class="fab fa-instagram"></i> Follow on Instagram
+      </a>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="reviews">
+    <div class="section-header">
+      <p class="section-tag">Love Notes</p>
+      <h2>What Our Girls Say</h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Absolutely obsessed with my Korean set from Muduli Fashion. The quality is insane for the price. Will definitely order again!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">P</div>
+          <div>
+            <strong>Priya S.</strong>
+            <small>Verified Buyer</small>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"The party wear collection is everything ✨ Got so many compliments. Packaging was cute too. 10/10 recommend!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">A</div>
+          <div>
+            <strong>Ananya R.</strong>
+            <small>Verified Buyer</small>
+          </div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>"Finally a brand that gets Gen-Z fashion. The oversized fits are chef's kiss 🖤 Super fast delivery too!"</p>
+        <div class="reviewer">
+          <div class="reviewer-avatar">S</div>
+          <div>
+            <strong>Sneha M.</strong>
+            <small>Verified Buyer</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <div class="contact-text">
+        <p class="section-tag">Get In Touch</p>
+        <h2>Let's Talk Fashion 💌</h2>
+        <p>DM us on Instagram or drop an email for orders, collabs, and inquiries.</p>
+        <div class="contact-links">
+          <a href="https://instagram.com/mudulifashion" target="_blank" class="contact-item">
+            <i class="fab fa-instagram"></i>
+            <span>@mudulifashion</span>
+          </a>
+          <a href="mailto:mudulifashion@gmail.com" class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <span>mudulifashion@gmail.com</span>
+          </a>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleForm(event)">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit" class="btn-primary">Send Message</button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner-grid">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="images/ChatGPT Image May 13, 2026, 11_06_44 PM.png" alt="Muduli Fashion" class="logo-img" />
+        </div>
+        <p class="footer-bio">Affordable fashion with premium vibes ✨<br />Korean • Western • Party Wear 🖤</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/mudulifashion" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="mailto:mudulifashion@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://wa.me/919818644698" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Quick Links</h4>
+        <div class="footer-links">
+          <a href="#collections">Collections</a>
+          <a href="#categories">Categories</a>
+          <a href="#about">About</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Collections</h4>
+        <div class="footer-links">
+          <a href="#collections">Korean Fashion</a>
+          <a href="#collections">Western Wear</a>
+          <a href="#collections">Oversized Fashion</a>
+          <a href="#collections">Party Wear</a>
+          <a href="#collections">Ethnic Wear</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Contact Us</h4>
+        <div class="footer-contact-list">
+          <a href="https://instagram.com/mudulifashion" target="_blank" class="footer-contact-item">
+            <i class="fab fa-instagram"></i><span>@mudulifashion</span>
+          </a>
+          <a href="mailto:mudulifashion@gmail.com" class="footer-contact-item">
+            <i class="fas fa-envelope"></i><span>mudulifashion@gmail.com</span>
+          </a>
+          <a href="https://wa.me/919818644698" target="_blank" class="footer-contact-item">
+            <i class="fab fa-whatsapp"></i><span>WhatsApp Us</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Muduli Fashion. All rights reserved.</p>
+      <p class="footer-copy">Made with 🖤 for fashion lovers</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/919818644698" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
