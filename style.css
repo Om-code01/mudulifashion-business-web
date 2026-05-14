@@ -453,6 +453,8 @@ em { font-style: italic; color: var(--nude); }
   cursor: pointer;
   background: var(--bg3);
   transition: opacity 0.3s, transform 0.3s;
+  display: flex;
+  flex-direction: column;
 }
 
 .collection-card.coming-soon-card .card-img-wrap {
@@ -467,14 +469,36 @@ em { font-style: italic; color: var(--nude); }
   align-items: center;
   justify-content: center;
 }
+
 .collection-card.large .card-img-wrap { aspect-ratio: 3/4; }
 
 .card-placeholder { display: none; }
 
-.card-img-wrap img { transition: transform 0.7s ease; }
+.card-img-wrap {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: var(--bg3);
+  flex-shrink: 0;
+}
+
+.card-img-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.7s ease;
+}
+
 .collection-card:hover .card-img-wrap img { transform: scale(1.06); }
 
-.card-info { padding: 1.2rem 1rem; background: var(--bg2); }
+.card-info {
+  padding: 1.2rem 1rem;
+  background: var(--bg2);
+  flex: 1;
+}
 .card-info h3 { margin-bottom: 0.3rem; }
 
 .card-info p {
