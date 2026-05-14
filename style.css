@@ -456,7 +456,18 @@ em { font-style: italic; color: var(--nude); }
   transition: opacity 0.3s, transform 0.3s;
 }
 
-.card-img-wrap { position: relative; aspect-ratio: 3/4; overflow: hidden; background: var(--bg3); }
+.collection-card.coming-soon-card .card-img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 3/4;
+}
+
+.insta-item.coming-soon-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .collection-card.large .card-img-wrap { aspect-ratio: unset; height: 100%; min-height: 500px; }
 
 .card-placeholder { display: none; }
@@ -1158,8 +1169,8 @@ footer {
   .cat-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-inner-grid { grid-template-columns: 1fr; gap: 2rem; }
   .footer-bottom { flex-direction: column; align-items: center; text-align: center; }
-  .hero-btns { flex-direction: column; }
-  .hero-btns .btn-primary, .hero-btns .btn-hero-outline { text-align: center; }
+  .about-stats { gap: 1.5rem; }
+}
 
 @media (max-width: 480px) {
   .gallery-grid { grid-template-columns: 1fr; }
