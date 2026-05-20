@@ -8,11 +8,29 @@ function closeComingSoon(e) {
 }
 
 // Product modal
-function openProduct(img, name, desc, price) {
+function openProduct(img, name, desc, price, colours) {
   document.getElementById('modalImg').src = img;
   document.getElementById('modalName').textContent = name;
   document.getElementById('modalDesc').textContent = desc;
   document.getElementById('modalPrice').textContent = price;
+
+  const coloursEl = document.getElementById('modalColours');
+  coloursEl.innerHTML = '';
+
+  if (colours && colours.length > 1) {
+    colours.forEach((c, i) => {
+      const btn = document.createElement('button');
+      btn.className = 'colour-swatch' + (i === 0 ? ' active' : '');
+      btn.textContent = c.label;
+      btn.onclick = () => {
+        document.getElementById('modalImg').src = c.img;
+        coloursEl.querySelectorAll('.colour-swatch').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      };
+      coloursEl.appendChild(btn);
+    });
+  }
+
   document.getElementById('productModal').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -145,11 +163,52 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Contact form
-function handleForm(e) {
+// Legacy local contact form fallback
+function legacyHandleForm(e) {
   e.preventDefault();
   const note = document.getElementById('formNote');
   note.textContent = 'Message sent! We\'ll get back to you soon 💌';
   e.target.reset();
   setTimeout(() => note.textContent = '', 4000);
 }
+
+// Contact form
+window.handleForm = async function handleForm(e) {
+  e.preventDefault();
+  const form = e.target;
+  const note = document.getElementById('formNote');
+  const submitButton = form.querySelector('button[type="submit"]');
+  const originalButtonText = submitButton.textContent;
+  const formData = new FormData(form);
+  const payload = {
+    name: String(formData.get('name') || '').trim(),
+    email: String(formData.get('email') || '').trim(),
+    message: String(formData.get('message') || '').trim()
+  };
+
+  note.textContent = 'Sending...';
+  submitButton.disabled = true;
+  submitButton.textContent = 'Sending...';
+
+  try {
+    const response = await fetch('/api/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const result = await response.json();
+
+    if (!response.ok) {
+      throw new Error(result.error || 'Unable to send message.');
+    }
+
+    note.textContent = 'Message sent! We will get back to you soon.';
+    form.reset();
+    setTimeout(() => note.textContent = '', 4000);
+  } catch (error) {
+    note.textContent = error.message || 'Could not send message. Please try again.';
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = originalButtonText;
+  }
+};

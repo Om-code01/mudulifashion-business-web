@@ -913,6 +913,33 @@ footer {
   font-weight: 400;
 }
 
+.modal-colours {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin: 0.3rem 0;
+}
+
+.colour-swatch {
+  padding: 0.4rem 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--border-mid);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+  background: none;
+  font-family: var(--font-sans);
+}
+
+.colour-swatch:hover,
+.colour-swatch.active {
+  border-color: var(--nude);
+  color: var(--text);
+  background: var(--bg3);
+}
+
 .modal-actions {
   display: flex;
   flex-direction: column;
