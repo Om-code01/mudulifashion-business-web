@@ -186,20 +186,31 @@ window.handleForm = async function handleForm(e) {
     message: String(formData.get('message') || '').trim()
   };
 
+  const config = window.MUDULI_SUPABASE || {};
+
+  if (
+    !window.supabase
+    || !config.url
+    || !config.anonKey
+    || config.url.includes('YOUR_PROJECT_ID')
+    || config.anonKey.includes('YOUR_SUPABASE_ANON_KEY')
+  ) {
+    note.textContent = 'Supabase is not configured yet. Please add your project URL and anon key.';
+    return;
+  }
+
   note.textContent = 'Sending...';
   submitButton.disabled = true;
   submitButton.textContent = 'Sending...';
 
   try {
-    const response = await fetch('/api/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    const result = await response.json();
+    const supabaseClient = window.supabase.createClient(config.url, config.anonKey);
+    const { error } = await supabaseClient
+      .from('messages')
+      .insert([payload]);
 
-    if (!response.ok) {
-      throw new Error(result.error || 'Unable to send message.');
+    if (error) {
+      throw error;
     }
 
     note.textContent = 'Message sent! We will get back to you soon.';
